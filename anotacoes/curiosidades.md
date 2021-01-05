@@ -30,3 +30,9 @@ view: <img [src]="url">
 component: url = 'www.google.com/fotos/123';
 
 O dado que será exibido pelo template é o lido pelo componente, é interessante frisar que nunca o dado é lido do template para o componente dessa forma, apenas ao contrario.
+
+# Curiosidades sobre modulos
+
+É interessante frizar que, para um novo componente ser enxergado ele precisa fazer parte de algum módulo da aplicação e esse módulo precisa ser carregado pelo módulo principal ( root / raíz),
+os módulos servem para agrupar componentes e coisas afins de forma que quem precise utilizar aqueles recursos só precise importa. Além de que para um componente ser enxergue em outros módulos é preciso colocar no array de exports: [],
+fazendo uma analogia a OO é como se tudo que estivesse em declarations: [], fosse privado ao módulo e tudo exports: [], público aos outros.
