@@ -36,3 +36,17 @@ O dado que será exibido pelo template é o lido pelo componente, é interessant
 É interessante frizar que, para um novo componente ser enxergado ele precisa fazer parte de algum módulo da aplicação e esse módulo precisa ser carregado pelo módulo principal ( root / raíz),
 os módulos servem para agrupar componentes e coisas afins de forma que quem precise utilizar aqueles recursos só precise importa. Além de que para um componente ser enxergue em outros módulos é preciso colocar no array de exports: [],
 fazendo uma analogia a OO é como se tudo que estivesse em declarations: [], fosse privado ao módulo e tudo exports: [], público aos outros.
+
+# Vscode -> aspas simples única
+
+para colocar aspas simples no projeto você precisa ir na no settings.json do vs code e colocar os seguintes valores:
+
+"javascript.preferences.quoteStyle":"single",
+"typescript.preferences.quoteStyle": "single"
+
+a partir disso a importação já vai funcionar para o javascript e typescript
+
+# Curiosidades sobre BrowserModule e CommomModule
+
+Jamais importe BrowserModule em módulos filhos, pois esse módulo vem com uma serie de recursos que deixaria o projeto bastante pesado se fosse importado várias vezes, para evitar isso
+podemos importar o CommomModule que além de pegar as diretivas que o Browser iria nós dar, ele evita essa reutilização do módulo.
