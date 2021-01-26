@@ -57,6 +57,9 @@ podemos importar o CommomModule que além de pegar as diretivas que o Browser ir
 porque inicialmente por exemplo um array poderia estar sem valor, e depois que os dados chegarem da api não serem exibidos na tela, usando o onChanges com o SimplesChange a gente garante que
 mesmo depois do componente ser carregado, ao passar um novo valor,  a lógica será refeita e os dados exibidos.
 
+Outro ponto interessante no ngOnChange é o fato de que esse método só é chamado, quando a variável que esta recebendo uma nova atribuição, então se for um array e você der apenas um push, não
+passará pelo changes, apenas se você atribuir um novo valor a esse array.
+
 # Pipes
 
 São "tubos/ canalizadores" de dados para receber um valor e transformar eles baseado em alguma lógica, podemos usar para filtros e conversões de datas seja qual for a necessidade da aplicação
