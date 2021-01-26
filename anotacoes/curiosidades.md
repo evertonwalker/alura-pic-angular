@@ -56,3 +56,12 @@ podemos importar o CommomModule que além de pegar as diretivas que o Browser ir
 É interessante sempre usar o onChange quando temos um componente que recebe uma propriedade, pois se for pra exibir um dado assyncrono a gente pode pedi que ele refaça alguma lógica, 
 porque inicialmente por exemplo um array poderia estar sem valor, e depois que os dados chegarem da api não serem exibidos na tela, usando o onChanges com o SimplesChange a gente garante que
 mesmo depois do componente ser carregado, ao passar um novo valor,  a lógica será refeita e os dados exibidos.
+
+# Pipes
+
+São "tubos/ canalizadores" de dados para receber um valor e transformar eles baseado em alguma lógica, podemos usar para filtros e conversões de datas seja qual for a necessidade da aplicação
+é interessante saber que sempre o transform precisa receber um valor na qual ele irá trabalhar e retornar para o componente, podemos usar o pipe em todas as tags do html, inclusive componentes feitos.
+
+# RxJs Subjects
+
+É interessante que ao usarmos os subjects para alocar memória com o subscribe, sempre lembrarmos de  ao sair do component implementar o onDestroy para cancelar a inscrição, pois isso ocosionaria em memory leak.
