@@ -50,3 +50,9 @@ a partir disso a importação já vai funcionar para o javascript e typescript
 
 Jamais importe BrowserModule em módulos filhos, pois esse módulo vem com uma serie de recursos que deixaria o projeto bastante pesado se fosse importado várias vezes, para evitar isso
 podemos importar o CommomModule que além de pegar as diretivas que o Browser iria nós dar, ele evita essa reutilização do módulo.
+
+# ngOnChange
+
+É interessante sempre usar o onChange quando temos um componente que recebe uma propriedade, pois se for pra exibir um dado assyncrono a gente pode pedi que ele refaça alguma lógica, 
+porque inicialmente por exemplo um array poderia estar sem valor, e depois que os dados chegarem da api não serem exibidos na tela, usando o onChanges com o SimplesChange a gente garante que
+mesmo depois do componente ser carregado, ao passar um novo valor,  a lógica será refeita e os dados exibidos.
