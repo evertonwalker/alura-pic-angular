@@ -68,3 +68,8 @@ São "tubos/ canalizadores" de dados para receber um valor e transformar eles ba
 # RxJs Subjects
 
 É interessante que ao usarmos os subjects para alocar memória com o subscribe, sempre lembrarmos de  ao sair do component implementar o onDestroy para cancelar a inscrição, pois isso ocosionaria em memory leak.
+
+# ng-content
+
+Você pode deixar uma lacuna dentro de um component, e injetar dados nele para serem exibidos através das tags, então : <app-test> <span> opa </span> </app-test> -> Dentro do app teste é necessário
+ter um <ng-content> para receber todo conteúdo html que foi injetado no template dele.
