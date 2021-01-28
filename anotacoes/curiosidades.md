@@ -73,3 +73,7 @@ São "tubos/ canalizadores" de dados para receber um valor e transformar eles ba
 
 Você pode deixar uma lacuna dentro de um component, e injetar dados nele para serem exibidos através das tags, então : <app-test> <span> opa </span> </app-test> -> Dentro do app teste é necessário
 ter um <ng-content> para receber todo conteúdo html que foi injetado no template dele.
+
+# Diretivas
+
+Podemos criar diretivas e usar elas como atributos no template, e também passar valores através de databinding semelhante ao componente.

@@ -36,6 +36,7 @@ export class PhotoListComponent implements OnInit, OnDestroy {
   load(): void {
     this.photoService.listFromUserPaginated(this.userName, ++this.currentPage)
       .subscribe(resultPhotos => {
+        this.filter = '';
         const photosNews = [];
         photosNews.push(...this.photos);
         photosNews.push(...resultPhotos);
