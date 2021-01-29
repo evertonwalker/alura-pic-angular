@@ -77,3 +77,9 @@ ter um <ng-content> para receber todo conteúdo html que foi injetado no templat
 # Diretivas
 
 Podemos criar diretivas e usar elas como atributos no template, e também passar valores através de databinding semelhante ao componente.
+
+# ViewChild
+
+Para nós comunicamos com algumas variaveis no html, podemos usar a variável do teamplate e depois acessar os seus dados através do Viewchield, com isso podemos ter acesso a todos os recursos
+do elemento nativo de acordo com seu tipo, porem isso é delicado pois o Angular universal só funciona se a aplicação for redenrizada no modo client side, então é preciso verificar a plataforma 
+que está sendo utilizada ao acessar o dom para algumas lógicas dos componentes.
