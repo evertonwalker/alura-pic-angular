@@ -83,3 +83,12 @@ Podemos criar diretivas e usar elas como atributos no template, e também passar
 Para nós comunicamos com algumas variaveis no html, podemos usar a variável do teamplate e depois acessar os seus dados através do Viewchield, com isso podemos ter acesso a todos os recursos
 do elemento nativo de acordo com seu tipo, porem isso é delicado pois o Angular universal só funciona se a aplicação for redenrizada no modo client side, então é preciso verificar a plataforma 
 que está sendo utilizada ao acessar o dom para algumas lógicas dos componentes.
+
+# BehaviorSubject
+
+O BehaviorSubject armazena a última emissão até que alguém apareça para consumi-la, isso pode solucionar problemas da página ser carregada antes do serviço ser carregado.
+
+# Async pipe
+
+Podemos retornar observables diretamente do serviço e guardar esses valor em variáveis e nelas usamos o pipe async para iterar ou fazer lógica com ngIf ou ngFor dentro do template,
+e o mais interessante desse fluxo é que se tivéssemos um Subject ou BehaviorSubject nesta situação, o Angular automaticamente executaria a sua destruição ( unsubscribe ).
