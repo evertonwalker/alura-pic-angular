@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ErrorsModule } from './errors/errors.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
+import { CorelModule } from './core/corel.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeModule } from './home/home.module';
     PhotosModule,
     HttpClientModule,
     ErrorsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CorelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
